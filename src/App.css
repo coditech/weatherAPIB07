@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway";
+}
+body {
+  background-color: #9ccef4;
+  margin:0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__navbar {
+  background-color: #759eda;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__navbar__input {
+  background-color: #759eda;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__navbar__button {
+  background-color: #5879c7;
+  padding: 0.5em 1em;
+  border: none;
+  color: #000;
+}
+
+.app__main {
+  background-color: #9ccef4;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.app__main__weather {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.app__main__weather__description {
+  color: #fff;
+}
+.app__main__weather div {
+  margin: 5px;
+}
+
+.app__main__weather__details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.app__main__weather__details div {
+  margin: auto 0.5em;
+}
+
+.app__main__weather-list {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__main__weather-list__weather-element {
+  text-align: center;
+  margin: 1em;
+  width: 5em;
 }

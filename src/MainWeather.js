@@ -1,13 +1,12 @@
 import React from 'react'
 
 export default function MainWeather(props) {
-  //console.log("main",props);
     return (
         <div className="app__main__weather">
         <img
           className="app__main__weather__image"
-          src="/cloudy.svg"
-          alt="storm icon"
+          src={props.image}
+          alt="weather icon"
         />
         <div className="app__main__weather__description">
           {props.description}

@@ -6,7 +6,7 @@ export default function HourlyWeatherItem(props) {
     return (
         <div className="app__main__weather-list__weather-element">
         <div>{time}:00</div>
-        <img src="/cloudy.svg" alt="storm icon" />
+        <img src={props.image} alt="weather icon" />
         <div>{Math.floor(props.temp- 273.15)}°C</div>
       </div>
     )

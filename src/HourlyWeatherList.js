@@ -7,7 +7,7 @@ export default function HourlyWeatherList(props) {
         <div className="app__main__weather-list">
         {props.list.map((item,index)=>{
                 if(index>0 && index< 8)
-                return <HourlyWeatherItem time={item.dt_txt} temp={item.main.temp} key={index}/>
+                return <HourlyWeatherItem time={item.dt_txt} temp={item.main.temp} key={index} image={props.getImage(item.weather[0].id)}/>
         }
                 )}
       

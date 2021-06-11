@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function MainWeather() {
+export default function MainWeather(props) {
+  //console.log("main",props);
     return (
         <div className="app__main__weather">
         <img
@@ -9,17 +10,17 @@ export default function MainWeather() {
           alt="storm icon"
         />
         <div className="app__main__weather__description">
-          Description
+          {props.description}
         </div>
         <div className="app__main__weather__Temperature">
-          <b>Temperature</b> Min Temp to Max Temp°C
+          <b>Temperature</b> {Math.floor(props.minTemp- 273.15)}°C to {Math.floor(props.maxTemp- 273.15)}°C
         </div>
         <div className="app__main__weather__details">
           <div className="app__main__weather__details__Humidity">
-            <b>Humidity</b> humidity%
+            <b>Humidity</b> {props.humidity}%
           </div>
           <div className="app__main__weather__details__Pressure">
-            <b>Pressure</b> pressure
+            <b>Pressure</b> {props.pressure}
           </div>
         </div>
       </div>
